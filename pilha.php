@@ -14,6 +14,7 @@ function funcao1()
     echo 'Saindo da função 1' . PHP_EOL;
 }
 
+
 function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
