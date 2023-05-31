@@ -3,7 +3,6 @@
 function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
-    //$divisao = intdiv(5, 0);
     try{
         funcao2();
     } catch(RuntimeException | DivisionByZeroError $erro){
@@ -19,16 +18,7 @@ function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
 
-   /*  $divisao = intdiv(5, 0);
-    $arrayFixo = new SplFixedArray(2);
-    $arrayFixo[3] = 'Valor';
-
-    for ($i = 1; $i <= 5; $i++) {
-        echo $i . PHP_EOL;
-    } */
-
-    $exception = new RuntimeException();
-    throw $exception;
+   throw new RuntimeException('Essa é a mensagem de erro!');
 
     echo 'Saindo da função 2' . PHP_EOL;
 }
